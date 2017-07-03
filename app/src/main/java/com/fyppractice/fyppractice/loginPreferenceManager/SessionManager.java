@@ -27,6 +27,7 @@ public class SessionManager {
     // Pref Index name
     private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
     private static final String KEY_USERNAME = "email";
+    private static final String LOGIN_TYPE = "type";
 
 
     public SessionManager(Context context) {
@@ -35,9 +36,10 @@ public class SessionManager {
         editor = pref.edit();
     }
 
-    public void setLogin(boolean isLoggedIn, String userName) {
+    public void setLogin(boolean isLoggedIn, String userName, String loginType) {
         editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn);
         editor.putString(KEY_USERNAME, userName);
+        editor.putString(LOGIN_TYPE, loginType);
         // commit changes
         editor.commit();
 
@@ -51,6 +53,10 @@ public class SessionManager {
     public String getKeyUsername() {
         return pref.getString(KEY_USERNAME, "");
     }
-    
+
+    public String getLoginTYpe() {
+        return pref.getString(LOGIN_TYPE, "");
+    }
+
 }
 

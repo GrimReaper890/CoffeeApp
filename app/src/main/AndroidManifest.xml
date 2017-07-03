@@ -13,10 +13,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category." />
-        </intent-filter>
+                <category android:name="android.intent.category." />
+            </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".AdminOptionsActivity" />
@@ -28,6 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".adminActivities.MainActivityAdmin" />
+        <activity android:name=".crActivities.MainActivityCr"></activity>
     </application>
 
 </manifest>

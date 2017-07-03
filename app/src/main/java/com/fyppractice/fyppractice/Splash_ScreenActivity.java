@@ -10,6 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.fyppractice.fyppractice.adminActivities.MainActivityAdmin;
+import com.fyppractice.fyppractice.crActivities.MainActivityCr;
 import com.fyppractice.fyppractice.loginPreferenceManager.SessionManager;
 
 
@@ -68,11 +70,23 @@ public class Splash_ScreenActivity extends Activity {
                         startActivity(intent);
                         finish();
                     } else {
-                        Intent intent = new Intent(Splash_ScreenActivity.this,
-                                AdminOptionsActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intent);
-                        finish();
+//                        check which type of user is logged in So session of that type user gets open :p awesome
+                        if(session.getLoginTYpe().equals("0")){
+
+                            Intent intent = new Intent(Splash_ScreenActivity.this,
+                                    MainActivityAdmin.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                            startActivity(intent);
+                            finish();
+
+                        }else if(session.getLoginTYpe().equals("1")){
+                            Intent intent = new Intent(Splash_ScreenActivity.this,
+                                    MainActivityCr.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                            startActivity(intent);
+                            finish();
+                        }
+
                     }
 
                 } catch (InterruptedException e) {

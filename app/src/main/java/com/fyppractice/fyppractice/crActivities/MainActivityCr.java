@@ -1,38 +1,24 @@
-package com.fyppractice.fyppractice;
+package com.fyppractice.fyppractice.crActivities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
+import com.fyppractice.fyppractice.LoginActivity;
+import com.fyppractice.fyppractice.R;
 import com.fyppractice.fyppractice.loginPreferenceManager.SessionManager;
 
-public class AdminOptionsActivity extends AppCompatActivity {
-    TextView tvTeachers,tvStudents,tvTimetable;
+public class MainActivityCr extends AppCompatActivity {
     SessionManager session;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_options);
-
-        tvTeachers=(TextView)findViewById(R.id.tvTeachers);
-        tvStudents=(TextView)findViewById(R.id.tvStudents);
-        tvTimetable=(TextView)findViewById(R.id.tvTimetable);
+        setContentView(R.layout.activity_main_cr);
         session = new SessionManager(getApplicationContext());
-
-        tvTeachers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent(AdminOptionsActivity.this,Teachers.class));
-            }
-        });
-
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
