@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <TextView
+            android:id="@+id/stdnt_admissionID_dummy_row"
+            android:layout_width="24sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textColor="@color/colorRecyclerText" />
+
+        <TextView
+            android:id="@+id/stdnt_name_dummy_row"
+            android:layout_width="24sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textColor="@color/colorRecyclerText" />
+        <!--<TextView-->
+        <!--android:layout_width="24sp"-->
+        <!--android:id="@+id/tchr_phnnmbr_dummy_row"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Contact"-->
+        <!--android:textColor="@color/colorRecyclerText"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_weight="1"/>-->
+        <TextView
+            android:layout_width="24sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/stdnt_status_dummy_row"
+            android:textColor="@color/colorRecyclerText"
+            android:text="Status"
+
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/stdnt_actionsView_dummy_row"
+            android:text="Actionvu "
+            android:clickable="true"
+            android:textStyle="bold"
+            android:layout_marginRight="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:clickable="true"
+            android:id="@+id/stdnt_actionsEdit_dummy_row"
+            android:text="Actionedit"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+    </TableRow>
+</TableLayout>
+
+
+
+

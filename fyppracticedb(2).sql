@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2017 at 09:28 AM
+-- Generation Time: Jul 08, 2017 at 08:18 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -121,19 +121,19 @@ INSERT INTO `bscs_ss2_8th` (`Name`, `Roll no.`, `Contact`) VALUES
 CREATE TABLE `bs_class_details` (
   `Semester` varchar(50) NOT NULL,
   `Type` varchar(50) NOT NULL,
-  `Program` varchar(50) NOT NULL,
   `Session` varchar(50) NOT NULL,
   `cr_name` varchar(50) NOT NULL,
   `cr_pass` varchar(50) NOT NULL,
-  `id` int(50) NOT NULL
+  `id` int(50) NOT NULL,
+  `Section` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `bs_class_details`
 --
 
-INSERT INTO `bs_class_details` (`Semester`, `Type`, `Program`, `Session`, `cr_name`, `cr_pass`, `id`) VALUES
-('8th', 'BS', 'CS', '2013-2017', 'Aslam', 'BirdFree', 2);
+INSERT INTO `bs_class_details` (`Semester`, `Type`, `Session`, `cr_name`, `cr_pass`, `id`, `Section`) VALUES
+('SEM-8', 'BSCS', '2013-2017', 'Aslam', 'BirdFree', 2, 'SS1');
 
 -- --------------------------------------------------------
 

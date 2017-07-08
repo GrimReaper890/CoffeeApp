@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.fyppractice.fyppractice.LoginActivity;
 import com.fyppractice.fyppractice.R;
@@ -13,11 +14,14 @@ import com.fyppractice.fyppractice.loginPreferenceManager.SessionManager;
 public class MainActivityCr extends AppCompatActivity {
     SessionManager session;
     String URL = "http://10.0.2.2/fyppracticedb/check_cr_login.php";
+    TextView txtVuWelcome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_cr);
         session = new SessionManager(getApplicationContext());
+        txtVuWelcome = (TextView) findViewById(R.id.welcome_msg_txt_vu);
+        txtVuWelcome.setText("Welcmoe dear "+getIntent().getStringExtra("cr_name")+"\n this is a place where you are granted \n with the MIGHT");
     }
 
 
