@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".AdminOptionsActivity" />
+        <activity android:name=".adminActivities.AdminOptionsActivity" />
         <activity android:name=".Teachers" />
         <activity android:name=".Splash_ScreenActivity">
             <intent-filter>
@@ -29,7 +29,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".adminActivities.MainActivityAdmin" />
-        <activity android:name=".crActivities.MainActivityCr"></activity>
+        <activity android:name=".crActivities.MainActivityCr" />
+        <activity android:name=".TimetableManagment.Timetable" />
+        <activity android:name=".TimetableManagment.Monday" />
+        <activity android:name=".TimetableManagment.Tuesday" />
+        <activity android:name=".TimetableManagment.Wednesday" />
+        <activity android:name=".TimetableManagment.Thursday" />
+        <activity android:name=".TimetableManagment.Friday"></activity>
     </application>
 
 </manifest>

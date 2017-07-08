@@ -8,7 +8,6 @@
     android:padding="10dp"
     android:layout_margin="10dp">
 
-
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"

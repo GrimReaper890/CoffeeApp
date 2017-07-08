@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">fyppractice</string>
+    <string-array name="user_type_array">
+
+        <item>ADMIN</item>
+        <item>CR</item>
+    </string-array>
+    <string-array name="class_type_array">
+
+        <item>BSCS</item>
+        <item>BSSE</item>
+        <item>BSIT</item>
+        <item>MIT</item>
+        <item>MSCS</item>
+    </string-array>
 </resources>

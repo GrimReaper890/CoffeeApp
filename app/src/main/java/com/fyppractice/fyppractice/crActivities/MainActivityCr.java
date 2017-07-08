@@ -12,6 +12,7 @@ import com.fyppractice.fyppractice.loginPreferenceManager.SessionManager;
 
 public class MainActivityCr extends AppCompatActivity {
     SessionManager session;
+    String URL = "http://10.0.2.2/fyppracticedb/check_cr_login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

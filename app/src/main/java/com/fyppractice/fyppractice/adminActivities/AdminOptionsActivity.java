@@ -1,4 +1,4 @@
-package com.fyppractice.fyppractice;
+package com.fyppractice.fyppractice.adminActivities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,12 +8,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.fyppractice.fyppractice.LoginActivity;
+import com.fyppractice.fyppractice.R;
+import com.fyppractice.fyppractice.RegisterActivity;
+import com.fyppractice.fyppractice.Teachers;
 import com.fyppractice.fyppractice.loginPreferenceManager.SessionManager;
 
 public class AdminOptionsActivity extends AppCompatActivity {
     TextView tvTeachers,tvStudents,tvTimetable;
     SessionManager session;
-
+    TextView tvRegisterLink;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,14 @@ public class AdminOptionsActivity extends AppCompatActivity {
             }
         });
 
+
+        tvRegisterLink = (TextView) findViewById(R.id.tvRegisterLink);
+        tvRegisterLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminOptionsActivity.this, RegisterActivity.class));
+            }
+        });
     }
 
     @Override

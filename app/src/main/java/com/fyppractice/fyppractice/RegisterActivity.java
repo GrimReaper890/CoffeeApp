@@ -25,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText etName, etPhone, etUsernameR, etPasswordR;
     Button btnRegister;
     RadioButton rBtnAdmin, rBtnCr;
-    String URL = "http://10.0.2.2:8080/fyppracticedb/registerme.php";
+    String URL = "http://10.0.2.2/fyppracticedb/registerme.php";
     String name, phone, username, password;
 
     //    0 =student(CR)     1 = "ADMIN"
