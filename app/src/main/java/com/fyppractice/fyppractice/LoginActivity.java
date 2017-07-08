@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText etUsername, etPassword;
     Button btnLogin;
 
-    String URL = "http://10.0.2.2/fyppracticedb/check_cr_login.php";
+    String URL = "http://10.0.2.2:8080/fyppracticedb/check_cr_login.php";
     String cr_type,cr_semster,cr_program,cr_name,cr_session,cr_password;
     SessionManager session;
     //    0 =student(CR)     1 = "ADMIN"
@@ -132,26 +132,28 @@ public class LoginActivity extends AppCompatActivity {
 
 //                condition to check eitehr user is connected with internet or not
 //                then on clcik getting all the edit text values and  save them in the string
-                String cr_type,cr_semster,cr_program,cr_name,cr_session,cr_password;
+
+
+                cr_name=etUsername.getText().toString();
+                cr_password=etPassword.getText().toString();
                 cr_type = crTypeSpinner.getSelectedItem().toString();
+                cr_semster= semesterTypeSpinner.getSelectedItem().toString();
+                cr_session=sectionTypeSpinner.getSelectedItem().toString();
+
+
+                Toast.makeText(LoginActivity.this, "1"+cr_type+"2"+cr_name+"3"+cr_semster+"4"+cr_session+"5"+cr_password, Toast.LENGTH_SHORT).show();
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    JSONObject jsonObject = null;
-                    try {
-                        jsonObject = new JSONObject(response);
-                        if(jsonObject.getString("success").equals("1")){
-                            Intent intent = new Intent(LoginActivity.this,MainActivityCr.class);
-                            startActivity(intent);
-                            finish();
-                        }else
-                        {
-                            Toast.makeText(LoginActivity.this, "Your Details didnt match", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
+                        if(response.equals("true")){
+                            startActivity(new Intent(LoginActivity.this, MainActivityAdmin.class));
+//                                    set the session login by giving userName
+                                        session.setLogin(true, cr_name,TypeChecker);
+                                        finish();
+                        }else{
+                            Toast.makeText(LoginActivity.this, "Please Recheck the email or signUp", Toast.LENGTH_SHORT).show();
                         }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -163,12 +165,11 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> params = new HashMap<>();
-//                    params.put("cr_semster", cr_semster);
-//                    params.put("cr_type", cr_type);
-//                    params.put("cr_program", cr_program);
-//                    params.put("cr_name", cr_name);
-//                    params.put("cr_session", cr_session);
-//                    params.put("cr_password",cr_password );
+                    params.put("cr_semster", cr_semster);
+                    params.put("cr_type", cr_type);
+                    params.put("cr_name", cr_name);
+                    params.put("cr_session", cr_session);
+                    params.put("cr_password",cr_password );
 
                     return params;
 
