@@ -3,7 +3,9 @@
 <TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+
+    >
 
     <TableRow
         android:layout_width="match_parent"
@@ -11,19 +13,21 @@
 
         >
         <TextView
-            android:id="@+id/stdnt_admissionID_dummy_row"
-            android:layout_width="24sp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Name"
-            android:textColor="@color/colorRecyclerText" />
-
-        <TextView
             android:id="@+id/stdnt_name_dummy_row"
             android:layout_width="24sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Name"
+            android:layout_margin="8dp"
+            android:textColor="@color/colorRecyclerText" />
+
+        <TextView
+            android:id="@+id/stdnt_RlNum_dummy_row"
+            android:layout_width="24sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RolNumb"
+            android:layout_margin="8dp"
             android:textColor="@color/colorRecyclerText" />
         <!--<TextView-->
         <!--android:layout_width="24sp"-->
@@ -36,10 +40,10 @@
         <TextView
             android:layout_width="24sp"
             android:layout_height="wrap_content"
-            android:id="@+id/stdnt_status_dummy_row"
+            android:id="@+id/stdnt_contact_dummy_row"
             android:textColor="@color/colorRecyclerText"
             android:text="Status"
-
+            android:layout_margin="8dp"
             android:layout_weight="1"/>
         <TextView
             android:layout_width="wrap_content"
@@ -48,6 +52,7 @@
             android:id="@+id/stdnt_actionsView_dummy_row"
             android:text="Actionvu "
             android:clickable="true"
+            android:layout_margin="8dp"
             android:textStyle="bold"
             android:layout_marginRight="16dp"
             />
@@ -59,6 +64,7 @@
             android:id="@+id/stdnt_actionsEdit_dummy_row"
             android:text="Actionedit"
             android:textStyle="bold"
+            android:layout_margin="8dp"
             android:layout_weight="1"/>
 
     </TableRow>

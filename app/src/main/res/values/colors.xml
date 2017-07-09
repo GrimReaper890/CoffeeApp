@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="white">#FFF</color>
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="colorPrimaryDark">#006064</color>
+    <color name="colorAccent">#01bbd7</color>
+    <color name="colorFrameLayOuts">#FFF</color>
     <color name="colorRecyclerText">#000</color>
+    <color name="selectorColor">#0097A7</color>
+    <color name="textColor">#FFF</color>
+    <color name="TotalStudentsCardColor">#FF9800</color>
+    <color name="ActiveStudentsColor">#2E7D32</color>
+    <color name="SuccessAlert">#2E7D32</color>
+    <color name="TeacherColor">#E53935</color>
+    <color name="ErrorColor">#E53935</color>
+    <color name="Accounts_drawer_backGroundColor">#FFF</color>
+    <color name="HyperLinkColor">#3949AB</color>
+    <color name="StylerBg">#E0E0E0</color>
+    <color name="white">#FFF</color>
+
 </resources>

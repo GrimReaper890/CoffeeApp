@@ -13,31 +13,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category." />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".adminActivities.AdminOptionsActivity" />
-        <activity android:name=".Teachers" />
-        <activity android:name=".Splash_ScreenActivity">
+        <activity android:name=".RegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".adminActivities.AdminOptionsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Teachers"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Splash_ScreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"
+                    />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".adminActivities.MainActivityAdmin" />
-        <activity android:name=".crActivities.MainActivityCr" />
-        <activity android:name=".TimetableManagment.Timetable" />
-        <activity android:name=".TimetableManagment.Monday" />
-        <activity android:name=".TimetableManagment.Tuesday" />
-        <activity android:name=".TimetableManagment.Wednesday" />
-        <activity android:name=".TimetableManagment.Thursday" />
-        <activity android:name=".TimetableManagment.Friday"></activity>
+        <activity android:name=".adminActivities.MainActivityAdmin"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".crActivities.MainActivityCr"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".TimetableManagment.Timetable"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".TimetableManagment.Monday"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".TimetableManagment.Tuesday"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".TimetableManagment.Wednesday"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".TimetableManagment.Thursday"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".TimetableManagment.Friday"
+            android:configChanges="keyboardHidden|orientation|screenSize"></activity>
     </application>
 
 </manifest>

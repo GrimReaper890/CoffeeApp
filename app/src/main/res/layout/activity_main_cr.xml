@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    android:orientation="vertical">
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
 
     <TextView
         android:id="@+id/welcome_msg_txt_vu"
@@ -13,12 +14,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="DUMB DUMMER DUMMESST"
-        android:textColor="@color/white"
+        android:textColor="#000"
         android:textSize="25sp"
         android:textStyle="bold" />
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="See All students"
+        android:onClick="getAllStudents"/>
+
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/teacher_recyclerVu"
+        android:id="@+id/stdnt_recyclerVu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="fill_horizontal" />

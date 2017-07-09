@@ -40,8 +40,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText etUsername, etPassword;
     Button btnLogin;
 
-    String URL = "http://10.0.2.2/fyppracticedb/check_cr_login.php";
-    String cr_type, cr_semster, cr_program, cr_name, cr_session, cr_password;
+    String URL = "http://10.0.2.2:8080/fyppracticedb/check_cr_login.php";
+    String cr_type, cr_semster, cr_section, cr_name, cr_session, cr_password;
     SessionManager session;
     //    0 =student(CR)     1 = "ADMIN"
     String TypeChecker = "0";
@@ -149,6 +149,7 @@ public class LoginActivity extends AppCompatActivity {
                     cr_type = crTypeSpinner.getSelectedItem().toString();
                     cr_semster = semesterTypeSpinner.getSelectedItem().toString();
                     cr_session= SessionArraySpinner.getSelectedItem().toString();
+                    cr_section= sectionTypeSpinner.getSelectedItem().toString();
 
                     if (cr_name.isEmpty() || cr_password.isEmpty()) {
                         etUsername.setError("Please fill all the fields");
@@ -163,7 +164,11 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
                                 if (response.equals("true")) {
                                     TypeChecker = "1";
-                                    startActivity(new Intent(LoginActivity.this, MainActivityCr.class).putExtra("cr_name",cr_name));
+                                    Intent i = new Intent(LoginActivity.this, MainActivityCr.class);
+                                    i.putExtra("cr_name",cr_name);
+                                    i.putExtra("cr_type",cr_type);
+                                    i.putExtra("cr_section",cr_section);
+                                    startActivity(i);
 //                                    set the session login by giving userName
                                     session.setLogin(true, cr_name, TypeChecker);
                                     finish();
@@ -186,6 +191,7 @@ public class LoginActivity extends AppCompatActivity {
                                 params.put("cr_name", cr_name);
                                 params.put("cr_session", cr_session);
                                 params.put("cr_password", cr_password);
+                                params.put("cr_section",cr_section);
 
                                 return params;
 
