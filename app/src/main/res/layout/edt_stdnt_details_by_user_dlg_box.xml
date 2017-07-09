@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="Complete Student Profile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="18sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorFrameLayOuts"
+            android:elevation="4dp"
+            android:padding="@dimen/activity_horizontal_margin">
+            <!--linear layout for the all container items-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--The Close Button on the top left cute one!-->
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<ImageButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@android:drawable/btn_minus" />-->
+                <!--</LinearLayout>-->
+                <!--The CNIC of student-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/button_padding_dimes"
+                    android:layout_weight="1"
+                    android:background="@color/colorFrameLayOuts"
+                    android:elevation="4dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edt_stdnt_r_numb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="ROll Number:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/StylerBg"
+                    android:elevation="4dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edt_stdnt_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Name:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/button_padding_dimes"
+                    android:layout_weight="1"
+                    android:background="@color/colorFrameLayOuts"
+                    android:elevation="4dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edt_stdnt_contct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Contact:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:padding="16dp"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/btn_edtVu_stdnt_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/button_selector"
+                        android:text="update"
+                        android:textColor="@color/textColor"
+                        android:layout_marginRight="16dp"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_edtVu_stdnt_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/textColor"
+                        android:background="@drawable/button_selector"
+
+                        android:text="Close" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</ScrollView>
